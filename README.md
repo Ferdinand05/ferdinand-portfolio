@@ -1,9 +1,6 @@
-
 # Ferdinand Portfolio
 
 a new Portfolio created with Laravel 11
-
-
 
 ## Tech Stack
 
@@ -11,7 +8,6 @@ a new Portfolio created with Laravel 11
 
 **Server:** Laragon, HeidiSQL, Laravel
 
-
 ## Feedback
 
-If you have any feedback, please reach out to us at fkoryanto@gmail.com
+If you have any feedback, please reach out to me at fkoryanto@gmail.com
