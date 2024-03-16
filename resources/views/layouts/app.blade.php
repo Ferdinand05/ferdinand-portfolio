@@ -23,6 +23,10 @@
     </main>
 
 
+
+    <footer class="border border-t">
+        @include('layouts.footer')
+    </footer>
 </body>
 
 </html>
