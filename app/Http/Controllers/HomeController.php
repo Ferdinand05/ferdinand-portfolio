@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,6 +12,11 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('home.index');
+        return view(
+            'home.index',
+            [
+                'projects' => Project::latest()->get()
+            ]
+        );
     }
 }
