@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -12,7 +16,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+
+
+        return view('post.index', ['posts' => Post::all()]);
     }
 
     /**
@@ -20,7 +26,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('post.create', ['categories' => Category::all()]);
     }
 
     /**
@@ -28,7 +35,32 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validasi form request
+        $request->validate([
+            'title' => ['required', 'string', 'min:3'],
+            'description' => ['required', 'string', 'min:5'],
+            'content' => ['required'],
+            'image' => ['image', 'mimes:png,jpg,jpeg', 'required'],
+            'categories' => ['required']
+        ]);
+
+
+
+        $image = $request->file('image')->store('post-images');
+
+        // insert data to database
+        Post::create([
+            'title' => $request->title,
+            'slug' => Str::slug($request->title),
+            'description' => $request->description,
+            'body' => $request->content,
+            'body_image' => $image,
+            'user_id' => Auth::id(),
+            'category_id' => $request->categories,
+        ]);
+
+        // redirect to post.index
+        return redirect()->to(route('post.index'))->with('success', 'Post has been created!');
     }
 
     /**
@@ -58,8 +90,20 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Post $post)
+    public function destroy(Request $request)
     {
-        //
+        if ($request->ajax()) {
+
+            $post = Post::find($request->post('id_post'));
+            Storage::delete($post->body_image);
+            $post->delete();
+
+            $json = [
+                'success' => 'Data has been deleted!'
+            ];
+
+
+            return response()->json($json);
+        }
     }
 }

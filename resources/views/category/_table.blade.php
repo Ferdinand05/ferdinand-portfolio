@@ -28,6 +28,7 @@
                     </th>
                     <td class="px-6 py-4">
                         {{ $category->name }}
+                        {{ $category->posts->count() }}
                     </td>
                     <td class="px-6 py-4">
                         {{ $category->created_at->toFormattedDateString() }}

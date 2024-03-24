@@ -15,4 +15,9 @@ class Category extends Model
     {
         return $this->belongsToMany(Project::class, 'project_categories');
     }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'category_id');
+    }
 }
