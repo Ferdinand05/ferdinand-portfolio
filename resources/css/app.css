@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.body a {
+    @apply text-blue-700 hover:underline;
+}
+
+.body p {
+    @apply mb-3;
+}
+
+.body ol {
+    @apply list-disc m-3 ms-7;
+}
+
+.body ul {
+    @apply list-decimal m-3 ms-7;
+}
+
+.body h1 {
+    @apply text-4xl font-semibold mb-1;
+}
+.body h2 {
+    @apply text-3xl font-semibold mb-1;
+}
+.body h3 {
+    @apply text-2xl font-semibold mb-1;
+}
+.body h4 {
+    @apply text-xl font-semibold mb-1;
+}

@@ -40,13 +40,13 @@ class PostController extends Controller
             'title' => ['required', 'string', 'min:3'],
             'description' => ['required', 'string', 'min:5'],
             'content' => ['required'],
-            'image' => ['image', 'mimes:png,jpg,jpeg', 'required'],
+            'body_image' => ['required', 'image', 'mimes:png,jpg,jpeg'],
             'categories' => ['required']
         ]);
 
 
 
-        $image = $request->file('image')->store('post-images');
+        $image = $request->file('body_image')->store('post-images');
 
         // insert data to database
         Post::create([
@@ -68,7 +68,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('post.show', ['post' => $post]);
     }
 
     /**

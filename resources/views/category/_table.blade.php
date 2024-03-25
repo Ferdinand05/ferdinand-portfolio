@@ -9,6 +9,9 @@
                     Name
                 </th>
                 <th scope="col" class="px-6 py-3">
+                    Used
+                </th>
+                <th scope="col" class="px-6 py-3">
                     Created at
                 </th>
                 <th scope="col" class="px-6 py-3">
@@ -28,7 +31,14 @@
                     </th>
                     <td class="px-6 py-4">
                         {{ $category->name }}
-                        {{ $category->posts->count() }}
+                    </td>
+                    <td class="px-6 py-4 flex flex-col">
+                        <span>
+                            Post : {{ $category->posts->count() }}
+                        </span>
+                        <span>
+                            Project : {{ $category->projects->count() }}
+                        </span>
                     </td>
                     <td class="px-6 py-4">
                         {{ $category->created_at->toFormattedDateString() }}
@@ -78,7 +88,7 @@
                                 icon: "success",
                                 title: response.success,
                                 showConfirmButton: false,
-                                timer: 800
+                                timer: 1000
                             });
                         }
 

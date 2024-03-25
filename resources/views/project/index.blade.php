@@ -93,7 +93,7 @@
                         data: {
                             id_project: id
                         },
-                        dataType: "dataType",
+                        dataType: "json",
                         success: function(response) {
                             if (response.success) {
                                 Swal.fire({
@@ -103,9 +103,13 @@
                                     showConfirmButton: false,
                                     timer: 1000
                                 });
-                                location.reload()
 
                             }
+
+                            setTimeout(() => {
+                                window.location.reload();
+                            }, 1500);
+
                         }
                     });
 
