@@ -17,12 +17,12 @@
     </div>
 
     {{-- about --}}
-    <section id="about">
+    <section id="about" class="dark:bg-gray-800 dark:text-gray-400">
         <x-container>
             <div class=" space-y-5">
                 <div class=" text-center md:text-left">
-                    <h1 class="text-2xl font-bold md:text-3xl ">About</h1>
-                    <p class=" font-light md:text-xl">Get to know me</p>
+                    <h1 class="text-2xl font-bold md:text-3xl dark:text-gray-300">About</h1>
+                    <p class=" font-light md:text-xl ">Get to know me</p>
                 </div>
                 <div class="text-center md:text-left">
                     <p> I am a person who is interested in technology, especially in the field of Web development. now I
@@ -38,7 +38,8 @@
                     {{-- icons --}}
                     <div class="flex justify-center gap-5 md:justify-start md:gap-7">
                         <div>
-                            <a href="" class="text-gray-600 hover:text-gray-900 duration-150 ">
+                            <a href=""
+                                class="text-gray-600 hover:text-gray-900 duration-150  dark:hover:text-gray-400">
                                 <svg class=" w-6 h-6 md:w-8 md:h-8 hover:scale-105 duration-150" fill="currentColor"
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                     <path
@@ -47,7 +48,8 @@
                             </a>
                         </div>
                         <div>
-                            <a href="" class=" text-gray-600 hover:text-gray-900 duration-150 ">
+                            <a href=""
+                                class=" text-gray-600 hover:text-gray-900 duration-150  dark:hover:text-gray-400">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="md:w-8 md:h-8  w-6 h-6 hover:scale-105 duration-150" fill="currentColor"
                                     viewBox="0 0 24 24">
@@ -57,7 +59,8 @@
                             </a>
                         </div>
                         <div>
-                            <a href="" class="text-gray-600 hover:text-gray-900 duration-150 ">
+                            <a href=""
+                                class="text-gray-600 hover:text-gray-900 duration-150  dark:hover:text-gray-400">
                                 <svg class="w-6 h-6 md:w-8 md:h-8  duration-150 hover:scale-105"
                                     xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                                     <path
@@ -69,7 +72,7 @@
                     </div>
                     <div class="text-center md:text-left">
                         <button type="button"
-                            class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Download
+                            class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-gray-300 dark:hover:bg-gray-700">Download
                             CV</button>
                     </div>
                 </div>
@@ -80,12 +83,12 @@
 
 
     {{-- skillss --}}
-    <section id="skills">
+    <section id="skills" class="dark:bg-gray-800 dark:text-gray-400">
 
         <x-container>
             <div class=" space-y-7">
                 <div class=" text-center md:text-left">
-                    <h1 class="text-2xl font-bold md:text-3xl ">Skills</h1>
+                    <h1 class="text-2xl font-bold md:text-3xl dark:text-gray-300">Skills</h1>
                     <p class=" font-light md:text-xl">Some skills that i have</p>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
@@ -179,10 +182,10 @@
     </section>
 
 
-    <section id="project">
+    <section id="project" class="dark:bg-gray-800 dark:text-gray-400 dark:border-y dark:border-y-gray-700">
         <x-container>
             <div class=" text-center md:text-left mb-10">
-                <h1 class="text-2xl font-bold md:text-3xl ">Projects</h1>
+                <h1 class="text-2xl font-bold md:text-3xl dark:text-gray-300">Projects</h1>
                 <p class=" font-light md:text-xl">Some of the projects I created</p>
             </div>
 
